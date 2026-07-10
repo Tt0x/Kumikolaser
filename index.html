@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>How To Lasercut Kumiko Designs</title>
+    <!-- Bindet die saubere Schriftart ein -->
+    <link rel="stylesheet" href="https://googleapis.com">
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Container für das Nebeneinander-Layout (Flexbox) */
+        .media-container {
+            display: flex;
+            align-items: center;    /* Zentriert Text und Bild vertikal zueinander */
+            gap: 30px;              /* Abstand zwischen Textspalte und Bildspalte */
+            margin: 30px 0;         /* Abstand nach oben und unten */
+        }
+
+        /* Spalte für den Text */
+        .text-content {
+            flex: 1;                /* Verteilt den Platz gleichmäßig */
+        }
+
+        /* Spalte für das Bild */
+        .image-content {
+            flex: 1;                /* Verteilt den Platz gleichmäßig */
+        }
+
+        /* Einstellungen für das Bild selbst */
+        .image-content img {
+            max-width: 100%;        /* Verhindert, dass das Bild aus dem Div ausbricht */
+            height: auto;           /* Behält das richtige Seitenverhältnis bei */
+            display: block;
+            border-radius: 6px;     /* Schicke, leicht abgerundete Ecken */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Dezenter Schatten */
+        }
+
+        /* Mobil-Optimierung (Responsive Design) */
+        @media (max-width: 768px) {
+            .media-container {
+                flex-direction: column; /* Auf Handys rutscht das Bild unter den Text */
+                gap: 15px;
+            }
+            body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="doc" class="markdown-body container-fluid">
+    
+    <h1 id="How-To-Lasercut-Kumiko-Designs">How To Lasercut Kumiko Designs</h1>
+    
+    <h4 id="Used-Software">Used Software</h4>
+    <ol>
+        <li>Webapp: <a href="https://www.kumikodesigner.com/" target="_blank" rel="noopener">https://www.kumikodesigner.com/</a></li>
+        <li>Inkscape: <a href="https://inkscape.org/" target="_blank" rel="noopener">https://inkscape.org/</a></li>
+    </ol>
+
+    <div class="media-container">
+        <div class="text-content">
+            <h2 id="Create-your-Kumiko-design">Create your Kumiko design</h2>
+            <ul>
+                <li>With Kumiko Designer: <a href="https://www.kumikodesigner.com/" target="_blank" rel="noopener">https://www.kumikodesigner.com/</a></li>
+                <li>Export the Design as “black and white”</li>
+                <li>Save the design (.pdf) on your hard drive.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="Screenshot1.png" alt="Kumiko Design Screenshot">
+        </div>
+    </div>
+
+    <h2 id="Prepare-the-File-in-Inscape">Prepare the File in Inscape</h2>
+    <ul>
+        <li>Open the software Inkscape</li>
+        <li>Open the saved .pdf File</li>
+        <li>Import the file with standard settings</li>
+    </ul>
+
+    <h6 id="Make-sure-to-follow-the-steps-one-by-one-and-dont-mix-it-otherwise-it-might-not-work-as-expected">Make sure to follow the steps one by one and don't mix it, otherwise it might not work as expected.</h6>
+    <ol>
+        <li>Mark the whole Kumiko Design</li>
+        <li>In the menu go to “Object” press “Ungroup”</li>
+        <li>In the menu go to “Path” press “Object to Path”</li>
+        <li>Go to “Path” and press “Exclusion”</li>
+        <li>Unmark everything</li>
+        <li>Press “n” on your keyboard</li>
+    </ol>
+    
+    <ul>
+        <li>mark a line with your mouse</li>
+        <li>mark the rectangle</li>
+        <li>press delete</li>
+        <li>mark the small Line and delete it</li>
+    </ul>
+
+    <h6 id="Repeat-until-you-deletet-all-the-lines-which-should-not-be-cut-Delete-the-intersections-as-well-If-you-delete-to-much-use-the-undo-function-and-try-mark-a-diffrent-line-or-rectangle">Repeat until you deleted all the lines which should not be cut. Delete the intersections as well. If you delete too much use the undo function and try mark a different line or rectangle.</h6>
+    <h6 id="If-you-have-two-outer-layers-you-can-delete-one">If you have two outer layers you can delete one.</h6>
+    
+    <ul>
+        <li>Save the file with a different file name</li>
+        <li>Export the file as .svg</li>
+    </ul>
+
+    <h2 id="Import-the-svg-file-into-your-laser-cut-software">Import the .svg file into your laser cut software.</h2>
+    <ul>
+        <li>Mark everything and ungroup it.</li>
+        <li>Mark the parts you want to cut.</li>
+    </ul>
+
+    <p>If you want the Kumiko in a bigger sheet of Wood mark the outside and set it to low power or engraving. So you don't cut the whole Kumiko out of the bigger sheet of wood.</p>
+    <p>Choose the right size, position and start the cutting process.</p>
+
+</div>
+
+</body>

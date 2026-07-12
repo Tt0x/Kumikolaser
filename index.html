@@ -19,7 +19,7 @@
         .media-container {
             display: flex;
             align-items: center;    /* Zentriert Text und Bild vertikal zueinander */
-            gap: 15px;              /* Abstand zwischen Textspalte und Bildspalte */
+            gap: 30px;              /* Abstand zwischen Textspalte und Bildspalte */
             margin: 30px 0;         /* Abstand nach oben und unten */
         }
 
@@ -35,11 +35,19 @@
 
         /* Einstellungen für das Bild selbst */
         .image-content img {
-            max-width: 100%;        /* Verhindert, dass das Bild aus dem Div ausbricht */
+            max-width: 60%;        /* Verhindert, dass das Bild aus dem Div ausbricht */
             height: auto;           /* Behält das richtige Seitenverhältnis bei */
             display: block;
-            border-radius: 30px;     /* Schicke, leicht abgerundete Ecken */
+            border-radius: 15px;     /* Schicke, leicht abgerundete Ecken */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Dezenter Schatten */
+        }
+
+        /* Globales Styling für alle Bildunterschriften (einheitlich kleiner) */
+        figcaption {
+            font-size: 0.82em !important;
+            text-align: left !important;
+            color: #555555 !important;
+            margin-top: 8px;
         }
 
         /* Mobil-Optimierung (Responsive Design) */
@@ -52,75 +60,183 @@
                 padding: 15px;
             }
         }
+        
+        .triple-image-container {
+            display: flex;
+            justify-content: space-between; /* Verteilt die Bilder gleichmäßig */
+            gap: 15px;                      /* Abstand zwischen den Bildern */
+            width: 100%;
+        }
+        
+        .image-item {
+            flex: 1;                        /* Gibt allen drei Bildern exakt den gleichen Platz */
+            margin: 0;                      /* Entfernt Standard-Browser-Abstände */
+        }
+        
+        .image-item img {
+            width: 100%;                    /* Bild füllt das Drittel komplett aus */
+            height: auto;                   /* Verhindert Verzerrungen */
+            display: block;
+        }
+        
+        /* Optimierung für Smartphones: Bilder werden untereinander gestapelt */
+        @media (max-width: 768px) {
+            .triple-image-container {
+                flex-direction: column;
+            }
+        }
+        
     </style>
 </head>
 <body>
 
 <div id="doc" class="markdown-body container-fluid">
     
-    <h1 id="How-To-Lasercut-Kumiko-Designs">How To Lasercut Kumiko Designs</h1>
-    
-    <h4 id="Used-Software">Used Software</h4>
-    <ol>
-        <li>Webapp: <a href="https://www.kumikodesigner.com/" target="_blank" rel="noopener">https://www.kumikodesigner.com/</a></li>
-        <li>Inkscape: <a href="https://inkscape.org/" target="_blank" rel="noopener">https://inkscape.org/</a></li>
-    </ol>
+    <h1 id="How-To-Lasercut-Kumiko-Designs">How To Laser-Cut Kumiko Designs</h1>
+
+    <div class="media-container">
+        <div class="text-content">
+            <h4 id="Used-Software">Used Software</h4>
+            <ol>
+                <li>Webapp: <a href="https://www.kumikodesigner.com/" target="_blank" rel="noopener">https://www.kumikodesigner.com/</a></li>
+                <li>Inkscape: <a href="https://inkscape.org/" target="_blank" rel="noopener">https://inkscape.org/</a></li>
+            </ol>
+        </div>
+        <div class="image-content">
+            <figure>
+                <img src="Screenshot1.png" alt="Kumiko Design Screenshot">
+                <figcaption>Image 1: Example of a small Kumiko design.</figcaption>
+            </figure>
+        </div>
+    </div>
 
     <div class="media-container">
         <div class="text-content">
             <h2 id="Create-your-Kumiko-design">Create your Kumiko design</h2>
             <ul>
                 <li>With Kumiko Designer: <a href="https://www.kumikodesigner.com/" target="_blank" rel="noopener">https://www.kumikodesigner.com/</a></li>
-                <li>Export the Design as “black and white”</li>
+                <li>Export the design as “black and white”</li>
                 <li>Save the design (.pdf) on your hard drive.</li>
             </ul>
         </div>
         <div class="image-content">
-            <img src="Screenshot1.png" alt="Kumiko Design Screenshot">
+            <figure>
+                <img src="Screenshot2.png" alt="Kumiko Design Screenshot">
+                <figcaption>Image 2: Save the Kumiko design</figcaption>
+            </figure>        
         </div>
     </div>
 
-    <h2 id="Prepare-the-File-in-Inscape">Prepare the File in Inscape</h2>
+    <div class="media-container">
+        <div class="text-content">
+            <h2 id="Prepare-the-File-in-Inkscape">Prepare the File in Inkscape</h2>
+              <ul>
+                <li>Open the software Inkscape</li>
+                <li>Open the saved .pdf file</li>
+                <li>Import the file with standard settings</li>
+              </ul>
+        </div>
+        <div class="image-content">
+            <figure>
+                <img src="Screenshot3.png" alt="Kumiko Design Screenshot">
+                <figcaption>Image 3: Kumiko imported and selected</figcaption>
+            </figure>        
+        </div>
+    </div>
+
+    <div class="media-container">
+        <div class="text-content">
+            <h6 id="Make-sure-to-follow-the-steps-one-by-one-and-dont-mix-it-otherwise-it-might-not-work-as-expected">Make sure to follow the steps one by one and don't mix them up; otherwise, it might not work as expected.</h6>
+            <ol>
+                <li>Select the whole Kumiko design</li>
+                <li>In the menu, go to “Object” and press “Ungroup”</li>
+                <li>In the menu, go to “Path” and press “Object to Path”</li>
+                <li>Go to “Path” and press “Exclusion”</li>
+                <li>Deselect everything</li>
+                <li>Press “n” on your keyboard</li>
+            </ol>
+        </div>
+        <div class="image-content">
+            <figure>
+                <img src="Screenshot4.png" alt="Kumiko Design Screenshot">
+                <figcaption>Image 4: Kumiko ungrouped and selected</figcaption>
+            </figure>        
+        </div>
+    </div>
+
+    <div class="triple-image-container">
+        <figure class="image-item">
+            <img src="Screenshot5.png" alt="Kumiko Design Screenshot">
+            <figcaption>Image 5: Kumiko detail with nodes</figcaption>
+        </figure>            
+        <figure class="image-item">
+            <img src="Screenshot6.png" alt="Kumiko Design Screenshot">
+            <figcaption>Image 6: Kumiko detail with nodes selected</figcaption>
+        </figure>        
+        <figure class="image-item">
+            <img src="Screenshot7.png" alt="Kumiko Design Screenshot">
+            <figcaption>Image 7: Kumiko detail with line selected</figcaption>
+        </figure>        
+    </div>
+
+    <br>
     <ul>
-        <li>Open the software Inkscape</li>
-        <li>Open the saved .pdf File</li>
-        <li>Import the file with standard settings</li>
+        <li>Select a line with your mouse</li>
+        <li>Select the rectangle</li>
+        <li>Press delete</li>
+        <li>Select the small line and delete it</li>
     </ul>
 
-    <h6 id="Make-sure-to-follow-the-steps-one-by-one-and-dont-mix-it-otherwise-it-might-not-work-as-expected">Make sure to follow the steps one by one and don't mix it, otherwise it might not work as expected.</h6>
-    <ol>
-        <li>Mark the whole Kumiko Design</li>
-        <li>In the menu go to “Object” press “Ungroup”</li>
-        <li>In the menu go to “Path” press “Object to Path”</li>
-        <li>Go to “Path” and press “Exclusion”</li>
-        <li>Unmark everything</li>
-        <li>Press “n” on your keyboard</li>
-    </ol>
+    <div class="media-container">
+        <div class="text-content">
+            <h6 id="Repeat-until-you-deleted-all-the-lines-which-should-not-be-cut-Delete-the-intersections-as-well-If-you-delete-too-much-use-the-undo-function-and-try-to-mark-a-different-line-or-rectangle">Repeat until you have deleted all the lines which should not be cut. Delete the intersections as well. If you delete too much, use the undo function and try to select a different line or rectangle.</h6>
+            <h6 id="If-you-have-two-outer-layers-you-can-delete-one">If you have two outer layers, you can delete one.</h6>
+            
+            <ul>
+                <li>Save the file with a different file name</li>
+                <li>Export the file as .svg</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <figure>
+                <img src="Screenshot8.png" alt="Kumiko Design Screenshot">
+                <figcaption>Image 8: Finished Kumiko detail</figcaption>
+            </figure>        
+        </div>
+    </div>
     
-    <ul>
-        <li>mark a line with your mouse</li>
-        <li>mark the rectangle</li>
-        <li>press delete</li>
-        <li>mark the small Line and delete it</li>
-    </ul>
+     <div class="media-container">
+        <div class="text-content">
+            <h4 id="finished-file">Finished File.</h4>
+        </div>
+        <div class="image-content">
+            <figure>
+                <img src="Screenshot9.png" alt="Kumiko Design Screenshot">
+                <figcaption>Image 9: Finished Kumiko file</figcaption>
+            </figure>        
+        </div>
+    </div>   
 
-    <h6 id="Repeat-until-you-deletet-all-the-lines-which-should-not-be-cut-Delete-the-intersections-as-well-If-you-delete-to-much-use-the-undo-function-and-try-mark-a-diffrent-line-or-rectangle">Repeat until you deleted all the lines which should not be cut. Delete the intersections as well. If you delete too much use the undo function and try mark a different line or rectangle.</h6>
-    <h6 id="If-you-have-two-outer-layers-you-can-delete-one">If you have two outer layers you can delete one.</h6>
-    
-    <ul>
-        <li>Save the file with a different file name</li>
-        <li>Export the file as .svg</li>
-    </ul>
-
-    <h2 id="Import-the-svg-file-into-your-laser-cut-software">Import the .svg file into your laser cut software.</h2>
-    <ul>
-        <li>Mark everything and ungroup it.</li>
-        <li>Mark the parts you want to cut.</li>
-    </ul>
-
-    <p>If you want the Kumiko in a bigger sheet of Wood mark the outside and set it to low power or engraving. So you don't cut the whole Kumiko out of the bigger sheet of wood.</p>
-    <p>Choose the right size, position and start the cutting process.</p>
+     <div class="media-container">
+        <div class="text-content">
+            <h2 id="Import-the-svg-file-into-your-laser-cut-software">Import the .svg file into your laser cut software.</h2>
+            <ul>
+                <li>Select everything and ungroup it.</li>
+                <li>Select the parts you want to cut.</li>
+            </ul>
+        
+            <p>If you want the Kumiko in a bigger sheet of wood, select the outside and set it to low power or engraving. This way, you don't cut the whole Kumiko out of the bigger sheet of wood.</p>
+            <p>Choose the right size and position, then start the cutting process.</p>
+        </div>
+        <div class="image-content">
+            <figure>
+                <img src="finished-kumiko.png" alt="Kumiko Design Screenshot">
+                <figcaption>Image 10: Laser-cut Kumiko</figcaption>
+            </figure>        
+        </div>
+    </div>   
 
 </div>
 
 </body>
+</html>
